@@ -81,15 +81,31 @@ endsnippet
 
 # -------------- rt(react test)
 snippet rtc "React test for Component"
-import React, {PropTypes, Component} from 'react'
-import TestUtils from 'react-addons-test-utils'
-import `!p snip.rv =  "{0} from './{0}'".format(fn_base)`
+import {Simulate} from 'react-addons-test-utils'
+import * as TestUtils from 'react-shallow-testutils'
+import renderer from 'utils/tests/renderer'
+import domRenderer from 'utils/tests/domRenderer'
 
-describe("`!p snip.rv = fn_base`", () => {
+import `!p snip.rv =  "{0} from '../{0}'".format(fn_base)`
+
+describe('`!p snip.rv = fn_base`', () => {
+  let component
+  let render
+
+  describe('rendering', () => {
+    before(() => {
+      render = renderer(`!p snip.rv = fn_base`)
+    })
 
 		$0
+  })
 
-		})
+  describe('events handling', () => {
+    before(() => {
+      render = domRenderer(`!p snip.rv = fn_base`)
+    })
+  })
+})
 endsnippet
 
 # find

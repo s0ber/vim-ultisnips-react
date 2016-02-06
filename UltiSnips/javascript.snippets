@@ -6,7 +6,7 @@ endglobal
 # -------------- r (react)
 snippet rc "React Component"
 /* beautify preserve:start */
-import React, {PropTypes, Component} from 'react';
+import React, {PropTypes, Component} from 'react'
 /* beautify preserve:end */
 
 export default class `!p snip.rv = fn_base` extends Component {
@@ -15,23 +15,23 @@ export default class `!p snip.rv = fn_base` extends Component {
 	}
 
 	render() {
-		return (${1:<div>Hello world</div>});
+		return (${1:<div>Hello world</div>})
 	}
 }
 endsnippet
 
 snippet rfdn "React.findDOMNode"
-const node${1/^\w+/\u$0/} = React.findDOMNode($1);
+const node${1/^\w+/\u$0/} = React.findDOMNode($1)
 endsnippet
 
 # --------- rcf react class function
 snippet rcf "React Component as pure function"
-import React from 'react';
+import React from 'react'
 
 export default function `!p snip.rv = fn_base`(props) {
 	return (
 		<div>`!p snip.rv = fn_base`</div>
-	);
+	)
 }
 endsnippet
 
@@ -70,43 +70,43 @@ endsnippet
 
 # -------------- rt(react test)
 snippet rtc "React test for Component"
-import React, {PropTypes, Component} from 'react';
-import TestUtils from 'react-addons-test-utils';
-import `!p snip.rv =  "{0} from './{0}'".format(fn_base)`;
+import React, {PropTypes, Component} from 'react'
+import TestUtils from 'react-addons-test-utils'
+import `!p snip.rv =  "{0} from './{0}'".format(fn_base)`
 
 describe("`!p snip.rv = fn_base`", () => {
 
 		$0
 
-		});
+		})
 endsnippet
 
 # find
 snippet rtr "React TestUtils.renderIntoDocument"
-const ${2/^\w/\l$0/} = TestUtils.renderIntoDocument(<${2:`!p snip.rv = fn_base`} ${1: }/>);
+const ${2/^\w/\l$0/} = TestUtils.renderIntoDocument(<${2:`!p snip.rv = fn_base`} ${1: }/>)
 endsnippet
 
 snippet rtfrdct "React TestUtils.findRenderedDOMComponentWithTag"
-const $1 = TestUtils.findRenderedDOMComponentWithTag(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:tag}');
+const $1 = TestUtils.findRenderedDOMComponentWithTag(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:tag}')
 endsnippet
 
 snippet rtfrdcc "React TestUtils.findRenderedDOMComponentWithClass"
-const $1 = TestUtils.findRenderedDOMComponentWithClass(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:class}');
+const $1 = TestUtils.findRenderedDOMComponentWithClass(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:class}')
 endsnippet
 
 snippet rtfrct "React TestUtils.findRenderedComponentWithType"
-const ${1/^\w+/\l$0/} = TestUtils.findRenderedComponentWithType(${2:`!p snip.rv = lower_first(fn_base)`}, ${1:Component});
+const ${1/^\w+/\l$0/} = TestUtils.findRenderedComponentWithType(${2:`!p snip.rv = lower_first(fn_base)`}, ${1:Component})
 endsnippet
 
 # scry
 snippet rtsrdct "React TestUtils.scryRenderedDOMComponentsWithTag"
-const children${1/^\w+/\u$0/} = TestUtils.scryRenderedDOMComponentsWithTag(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:tag}');
+const children${1/^\w+/\u$0/} = TestUtils.scryRenderedDOMComponentsWithTag(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:tag}')
 endsnippet
 
 snippet rtsrdcc "React TestUtils.scryRenderedDOMComponentsWithClass"
-const children${1/^\w+/\u$0/} = TestUtils.scryRenderedDOMComponentsWithClass(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:class}');
+const children${1/^\w+/\u$0/} = TestUtils.scryRenderedDOMComponentsWithClass(${2:`!p snip.rv = lower_first(fn_base)`}, '${1:class}')
 endsnippet
 
 snippet rtsrct "React TestUtils.scryRenderedComponentsWithType"
-const children$1 = TestUtils.scryRenderedComponentsWithType(${2:`!p snip.rv = lower_first(fn_base)`}, ${1:Component});
+const children$1 = TestUtils.scryRenderedComponentsWithType(${2:`!p snip.rv = lower_first(fn_base)`}, ${1:Component})
 endsnippet

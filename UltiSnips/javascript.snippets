@@ -36,11 +36,15 @@ export default function `!p snip.rv = fn_base`(props) {
 endsnippet
 
 # --------- rpt
-snippet rpt "Prop types declaration"
+snippet rptd "Prop types declaration"
 static propTypes = {
 	${1}
 }
 
+endsnippet
+
+snippet rpt "PropTypes.."
+$2: PropTypes.$1
 endsnippet
 
 snippet rptr "PropTypes..isRequired"

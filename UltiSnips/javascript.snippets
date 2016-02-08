@@ -82,7 +82,6 @@ endsnippet
 # -------------- rt(react test)
 snippet rtc "React test for Component"
 import React from 'react'
-import * as TestUtils from 'react-shallow-testutils'
 import renderer from 'utils/tests/renderer'
 
 import `!p snip.rv =  "{0} from '../{0}'".format(fn_base)`
@@ -91,19 +90,13 @@ describe('`!p snip.rv = fn_base`', () => {
   let component
   const render = renderer(`!p snip.rv = fn_base`)
 
-  describe('rendering', () => {
-		$0
-  })
-
-  describe('events handling', () => {
-  })
+	$0
 })
 endsnippet
 
 snippet rtcc "React complex test for Component"
 import React from 'react'
 import {Simulate} from 'react-addons-test-utils'
-import * as TestUtils from 'react-shallow-testutils'
 import renderer from 'utils/tests/renderer'
 import domRenderer from 'utils/tests/domRenderer'
 
